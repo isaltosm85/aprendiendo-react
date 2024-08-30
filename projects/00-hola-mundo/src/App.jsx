@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard'
 
-const users = [
+const usersList = [
     {
         userName: 'IvanSaltos85',
         name: 'Iván Saltos Medina',
@@ -22,6 +22,11 @@ const users = [
         userName: 'wendyCitaLove',
         name: 'Wendy Peñafiel',
         isFollowing: false
+    },
+    {
+        userName: 'Loca',
+        name: 'Heredero',
+        isFollowing: false
     }
 ]
 
@@ -35,7 +40,7 @@ export function App () {
     return (
         <section className='App'>
             {
-                users.map(({ userName, name, isFollowing}) => (
+                usersList.map(({ userName, name, isFollowing}) => (
                     <TwitterFollowCard
                         key={userName}
                         userName={userName}
